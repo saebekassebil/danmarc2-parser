@@ -1,6 +1,6 @@
 {
   "name": "danmarc2-parser",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A streaming danMARC2 parser",
   "main": "index.js",
   "scripts": {
