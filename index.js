@@ -1,7 +1,6 @@
 'use strict';
 
 var Transform = require('readable-stream/transform'),
-  JSONStream = require('JSONStream'),
   dm2string = require('danmarc2-string'),
   inherits = require('util').inherits;
 
@@ -80,10 +79,3 @@ DanMARC2Parser.prototype._parseField = function(field) {
 }
 
 module.exports = DanMARC2Parser
-
-if (!module.parent) {
-  process.stdin
-    .pipe(module.exports())
-    .pipe(JSONStream.stringify())
-    .pipe(process.stdout);
-}

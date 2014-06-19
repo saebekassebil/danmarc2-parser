@@ -1,0 +1,3 @@
+usage: danmarc2-parser
+
+  Parses a danMARC2 entry from stdin and writes a JSONStream of fields to stdout
