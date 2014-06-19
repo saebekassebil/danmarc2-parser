@@ -2,6 +2,7 @@
 
 var Transform = require('readable-stream/transform'),
   JSONStream = require('JSONStream'),
+  dm2string = require('danmarc2-string'),
   inherits = require('util').inherits;
 
 var splitter = /(?:^|[^@])(\*[0-9a-zæøå])/gi;
@@ -65,7 +66,8 @@ DanMARC2Parser.prototype._parseField = function(field) {
     .split(splitter)
     .reduce(function(fields, subfield, i, arr) {
       if (/\*[0-9a-zæøå]/i.test(subfield))
-        fields[subfield] = arr.length > i + 1 ? arr[i + 1].trim() : undefined;
+        fields[subfield] = arr.length > i + 1 ?
+          dm2string(arr[i + 1].trim()) : undefined;
 
       return fields;
     }, {});
