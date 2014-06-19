@@ -1,0 +1,30 @@
+{
+  "name": "danmarc2-parser",
+  "version": "0.1.0",
+  "description": "A streaming danMARC2 parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saebekassebil/danmarc2-parser.git"
+  },
+  "keywords": [
+    "danMARC2",
+    "stream",
+    "parser"
+  ],
+  "author": {
+    "name": "Jakob Miland",
+    "email": "saebekassebil@gmail.com",
+    "url": "http://saebekassebil.me"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/saebekassebil/danmarc2-parser",
+  "dependencies": {
+    "JSONStream": "^0.8.3",
+    "danmarc2-string": "^0.1.0",
+    "readable-stream": "^1.0.27-1"
+  }
+}
